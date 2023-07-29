@@ -25,14 +25,22 @@ const updateReminder = async (id, reminder) => {
   const query = 'UPDATE reminders SET text = ?, date = ?, color = ? WHERE id = ?'
   const { text, date, color } = reminder;
   
-  const [updated] = await connection.execute(query, [text, date, color, id]);
+  const updated = await connection.execute(query, [text, date, color, id]);
 
   return updated;
 }
+
+const filterReminder = async (date) => {
+  const query = 'SELECT * FROM reminders WHERE date = ?';
+  const [filtered] = await connection.execute(query, [date]);
+
+  return filtered;
+};
 
 module.exports = {
   getAll,
   createReminder,
   deleteReminder,
   updateReminder,
+  filterReminder,
 };
