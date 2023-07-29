@@ -8,7 +8,6 @@
 ## 💡premissas
 - Não é necessário realizar login na plataforma
 - O usuário só tenta apagar lembretes já existentes
-- 
 
 ---
 
