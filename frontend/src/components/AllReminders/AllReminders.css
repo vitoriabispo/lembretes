@@ -1,0 +1,60 @@
+.allReminders {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.descriptionAllReminders h3 {
+  text-align: center;
+  color: #003E31;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.descriptionAllReminders p {
+  text-align: center;
+  color: #76918B;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.searchRow {
+  display: flex;
+  max-width: 350px;
+}
+
+.searchRow input {
+  background-color: #FFFFFF;
+  border: none;
+  width: 100px;
+  height: 45px;
+  border-radius: 5px;
+}
+
+#searchButton {
+  width: 20px;
+  background: #FFFFFF;
+}
+
+.searchRow button {
+  /*button*/
+  border: none;
+  width: 120px;
+  height: 45px;
+  border-radius: 5px;
+  background: #98D6CA;
+  
+  cursor: pointer;
+
+  /*font*/
+  color: #003E31;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.searchRow button:hover{
+  background-color: #0CA187;
+  transition: .9s;
+  color: #f3f3f3;
+}

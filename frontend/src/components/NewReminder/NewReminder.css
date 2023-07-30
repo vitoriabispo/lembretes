@@ -1,0 +1,126 @@
+.newReminder {
+  padding: 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p #closeButton {
+  display: flex;
+  align-items: flex-start;
+}
+
+.formNewReminder input {
+  border: none;
+  width: 340px;
+  height: 40px;
+  border-radius: 5px;
+
+  background-color: #E5EAE9;
+  color: #5B6260;
+  padding-left: 10px;
+}
+
+.formNewReminder select {
+  border: none;
+  width: 340px;
+  height: 40px;
+  border-radius: 5px;
+  color: #5B6260;
+  background-color: #E5EAE9;
+
+  padding-left: 10px;
+}
+
+.formNewReminder button {
+  /*button*/
+  border: none;
+  width: 350px;
+  height: 45px;
+  border-radius: 5px;
+  background: #98D6CA;
+  
+  cursor: pointer;
+
+  /*font*/
+  color: #003E31;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.formNewReminder button:hover {
+  background-color: #0CA187;
+  transition: .9s;
+  color: #f3f3f3;
+}
+
+.descriptionNewReminder h3 {
+  text-align: center;
+  color: #003E31;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.descriptionNewReminder p {
+  text-align: center;
+  color: #76918B;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.containerDateColor {
+  max-width: 350px;
+
+  display: flex;
+  justify-content: space-between ;
+}
+
+.containerDateColor #date {
+  max-width: 205px;
+}
+
+.containerDateColor #color {
+  max-width: 125px;
+}
+
+/*disable keyboard input in calendar*/
+input[type="date"] {
+  position: relative;
+}
+
+input[type="date"]:after {
+  content: "\25BC"; 
+  color: #98D6CA;
+  padding: 0 5px;
+}
+
+
+input[type="date"]:hover:after {
+  color: #0CA187;
+  transition: .9s;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+  
+  cursor: pointer;
+}
+
+
+input[type="date"]::-webkit-inner-spin-button {
+  z-index: 1;
+}
+
+
+input[type="date"]::-webkit-clear-button {
+   z-index: 1;
+}
