@@ -1,9 +1,15 @@
-function App() {
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import { Home } from "./pages/Home/Home"
+
+export default function App() {
   return (
     <div className="App">
-      <h1> my reminders </h1>
+      <Router>
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
-
-export default App;
