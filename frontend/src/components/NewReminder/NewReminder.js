@@ -2,7 +2,7 @@ import { IoIosClose } from 'react-icons/io';
 
 import './NewReminder.css';
 
-export function NewReminder() {
+export function NewReminder({isOpen, setNewReminderClose}) {
 
   function disableDates() {
     var date = new Date();
@@ -15,28 +15,40 @@ export function NewReminder() {
     var minDate = year+"-"+month+"-"+day;
     return minDate;
   }
-  
-  return(
-    <div className="newReminder">
-      <p id="closeButton"><IoIosClose /></p>
-      <div className="descriptionNewReminder">
-        <h3>new reminder</h3>
-        <p>add a new reminder to the list</p>
-      </div>
 
-      <form className="formNewReminder">
-        <input type="text" id="text" placeholder="description"/>
-        <div className="containerDateColor">
-        <input type="date" id="date" min={disableDates()}/>
-        <select id="color" placeholder="color">
-          <option value="red" style={{ backgroundColor: '#F77575' }}>red</option>
-          <option value="purple" style={{ backgroundColor: '#A890ED' }}>purple</option>
-          <option value="green" style={{ backgroundColor: '#B3EC7A' }}>green</option>
-          <option value="yellow" style={{ backgroundColor: '#F8DE94' }}>yellow</option>
-        </select>
+  if(isOpen) {
+    return(
+      <div className="newReminderBG">
+        <div className="newReminderForm">
+
+          <div className="closeButton">
+            <button onClick={setNewReminderClose}>
+              <IoIosClose size={30}/>
+            </button>
+          </div>
+          <div className="formTextContainer">
+            <div className="descriptionNewReminder">
+              <h3>new reminder</h3>
+              <p>add a new reminder to the list</p>
+            </div>
+
+            <form className="formNewReminder">
+              <input type="text" id="text" placeholder="description"/>
+              <div className="containerDateColor">
+                <input type="date" id="date" min={disableDates()}/>
+                <select id="color" placeholder="color">
+                  <option value="red" style={{ backgroundColor: '#F77575' }}>red</option>
+                  <option value="purple" style={{ backgroundColor: '#A890ED' }}>purple</option>
+                  <option value="green" style={{ backgroundColor: '#B3EC7A' }}>green</option>
+                  <option value="yellow" style={{ backgroundColor: '#F8DE94' }}>yellow</option>
+                </select>
+              </div>
+              <button type="submit" id="create">create</button>
+            </form>
+          </div>
         </div>
-        <button type="submit" id="create">create</button>
-      </form>
-    </div>
-  )
+      </div>
+    )
+  } 
+  return null;
 }

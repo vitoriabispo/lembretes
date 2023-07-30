@@ -1,14 +1,38 @@
-.newReminder {
-  padding: 60px;
+.newReminderBG {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: rgba(52, 52, 52, 0.79);
+  z-index: 3;
 }
 
-p #closeButton {
-  display: flex;
-  align-items: flex-start;
+.newReminderForm {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  bottom: 0;
+
+  background-color: #F3F3F3;
+  
+  padding: 40px;
+}
+
+.closeButton button {
+  border: none;
+  cursor: pointer;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: #F3F3F3;
+}
+
+.formNewReminder {
+  display: grid;
+  row-gap: 15px;
 }
 
 .formNewReminder input {
@@ -26,45 +50,63 @@ p #closeButton {
   border: none;
   width: 340px;
   height: 40px;
-  border-radius: 5px;
+  padding-left: 10px;
+  
   color: #5B6260;
+  border-radius: 5px;
+  cursor: pointer;
+
+  background-image: url("data:image/svg+xml;utf8,<svg fill='teal' height='24' viewBox='0 0 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
   background-color: #E5EAE9;
 
-  padding-left: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .formNewReminder button {
-  /*button*/
   border: none;
   width: 350px;
   height: 45px;
   border-radius: 5px;
-  background: #98D6CA;
-  
   cursor: pointer;
-
-  /*font*/
+  
+  background: #98D6CA;
   color: #003E31;
+
   font-size: 16px;
   font-weight: 400;
 }
 
 .formNewReminder button:hover {
   background-color: #0CA187;
-  transition: .9s;
   color: #f3f3f3;
+
+  transition: .9s;
+}
+
+.descriptionNewReminder {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .descriptionNewReminder h3 {
   text-align: center;
-  color: #003E31;
   font-size: 25px;
   font-weight: 700;
+
+  color: #003E31;
 }
 
 .descriptionNewReminder p {
-  text-align: center;
   color: #76918B;
+
+  text-align: center;
   font-size: 16px;
   font-weight: 400;
 }
@@ -91,13 +133,12 @@ input[type="date"] {
 
 input[type="date"]:after {
   content: "\25BC"; 
-  color: #98D6CA;
   padding: 0 5px;
+  color: teal;
 }
 
 
 input[type="date"]:hover:after {
-  color: #0CA187;
   transition: .9s;
 }
 

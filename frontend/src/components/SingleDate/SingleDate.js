@@ -8,11 +8,28 @@ export function SingleDate() {
       <div className="dateReminder">
         <p>30/08/2023</p>
       </div>
-      <div className="reminderList">
-        <p>BCC201 test <FiEdit2 /> <FiTrash /></p>
-        <p>BCC201 test <FiEdit2 /> <FiTrash /></p>
-        <p>BCC201 test <FiEdit2 /> <FiTrash /></p>
-        <p>BCC201 test <FiEdit2 /> <FiTrash /></p>
+      <div className="reminderContainer">
+      <div className="singleReminder">
+          <p>BCC201 test </p>
+          <div className="singleReminderBtns">
+            <button><FiEdit2 size={22}/></button>
+            <button><FiTrash size={22}/></button>
+          </div>
+        </div>
+        <div className="singleReminder">
+          <p>BCC201 test </p>
+          <div className="singleReminderBtns">
+            <button><FiEdit2 size={22}/></button>
+            <button><FiTrash size={22}/></button>
+          </div>
+        </div>
+        <div className="singleReminder">
+          <p>BCC201 test </p>
+          <div className="singleReminderBtns">
+            <button><FiEdit2 size={22}/></button>
+            <button><FiTrash size={22}/></button>
+          </div>
+        </div>
       </div>
     </div>
   )

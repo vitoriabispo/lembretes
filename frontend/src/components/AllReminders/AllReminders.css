@@ -1,4 +1,5 @@
 .allReminders {
+  padding: 30px;
 
   display: flex;
   flex-direction: column;
@@ -21,15 +22,19 @@
 
 .searchRow {
   display: flex;
-  max-width: 350px;
+  margin: 10px 0px 10px 0px;
 }
 
+
 .searchRow input {
-  background-color: #FFFFFF;
   border: none;
-  width: 100px;
+  width: 200px;
   height: 45px;
   border-radius: 5px;
+  
+  background-color: #FFFFFF;
+  color: #5B6260;
+  padding-left: 10px;
 }
 
 #searchButton {
@@ -38,16 +43,14 @@
 }
 
 .searchRow button {
-  /*button*/
   border: none;
-  width: 120px;
+  width: 220px;
   height: 45px;
   border-radius: 5px;
   background: #98D6CA;
-  
   cursor: pointer;
 
-  /*font*/
+
   color: #003E31;
   font-size: 16px;
   font-weight: 400;
@@ -57,4 +60,10 @@
   background-color: #0CA187;
   transition: .9s;
   color: #f3f3f3;
+}
+
+.listAllReminders {
+  max-height: 65vh;
+  overflow: hidden;
+  overflow-y: scroll;
 }

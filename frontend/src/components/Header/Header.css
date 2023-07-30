@@ -1,15 +1,17 @@
 .pageHeader {
   background: #0CA187;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  height: 90px;
+  height: 70px;
 
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 4;
 }
 
 .pageHeader p {
   color: #F3F3F3;
-  font-size: 30px;
+  font-size: 27px;
   font-weight: 700;
 
   margin-left: 40px;
