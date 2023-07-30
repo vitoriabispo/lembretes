@@ -22,9 +22,11 @@ export function AllReminders() {
           <input type="text" id="dateSearch" placeholder="search"/>
           <button type="submit" id="searchButton" ><FiSearch/></button>
         </form>
-        <button id="newReminderButton" onClick= {() => setNewReminderOpen(true)}>
-          add reminder
-        </button>
+        <div className="newReminderButton">
+          <button  onClick= {() => setNewReminderOpen(true)}>
+            add reminder
+          </button>
+        </div>
       </div>
       
       <div className="listAllReminders">
@@ -32,8 +34,8 @@ export function AllReminders() {
         <SingleDate/>
         <SingleDate/>
       </div>
-
       <NewReminder isOpen={newReminderOpen} setNewReminderClose={() => setNewReminderOpen(!newReminderOpen)}/>
+
 
 
     </div>

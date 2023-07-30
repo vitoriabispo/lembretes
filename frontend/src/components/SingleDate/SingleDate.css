@@ -1,5 +1,5 @@
 .singleDate {
-  margin: 10px 0px 10px 0px;
+  margin: 0px 0px 10px 0px;
   padding: 15px;
   width: 650px;
   border-radius: 10px;
@@ -8,11 +8,31 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+.dateReminder {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
 .dateReminder p {
   color: #003E31;
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 5px;
+}
+
+.dateReminder button {
+  color: #98D6CA;
+  background-color: #FFFFFF;
+  
+  cursor: pointer;
+  border: none;
+  width: 22px;
+  height: 22px;
+}
+
+.dateReminder button:hover {
+  color: #0CA187;
+  transition: .9s;
 }
 
 .reminderContainer {

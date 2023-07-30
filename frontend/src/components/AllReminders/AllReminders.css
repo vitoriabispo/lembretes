@@ -21,28 +21,43 @@
 }
 
 .searchRow {
-  display: flex;
-  margin: 10px 0px 10px 0px;
-}
+  width: 680px;
 
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 10px 0;
+}
 
 .searchRow input {
   border: none;
   width: 200px;
   height: 45px;
-  border-radius: 5px;
   
   background-color: #FFFFFF;
   color: #5B6260;
   padding-left: 10px;
+
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 #searchButton {
   width: 20px;
+  height: 45px;
   background: #FFFFFF;
+  border: none;
+  cursor: pointer;
+
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-.searchRow button {
+#searchButton:hover {
+    background: #fbfbfb;
+    transition: .9s;
+}
+
+.newReminderButton button {
   border: none;
   width: 220px;
   height: 45px;
@@ -56,10 +71,15 @@
   font-weight: 400;
 }
 
-.searchRow button:hover{
+.newReminderButton button:hover{
   background-color: #0CA187;
   transition: .9s;
   color: #f3f3f3;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: center;
 }
 
 .listAllReminders {
