@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { SingleDate } from "../../components/SingleDate/SingleDate"
 import { NewReminder } from "../../components/NewReminder/NewReminder"
@@ -7,9 +7,13 @@ import { FiSearch } from 'react-icons/fi';
 
 import './AllReminders.css';
 
-export function AllReminders() {
+export function AllReminders({reminders, setReminders}) {
 
-  const [newReminderOpen, setNewReminderOpen] = useState(false);
+  const [newReminderOpen, setNewReminderOpen] = useState(false); /* open and close the sidebar */
+
+  useEffect(() => {
+
+  }, [reminders])
   return(
     <div className="allReminders">
       <div className="descriptionAllReminders">
@@ -27,17 +31,17 @@ export function AllReminders() {
             add reminder
           </button>
         </div>
-      </div>
+      </div>    
       
       <div className="listAllReminders">
-        <SingleDate/> 
-        <SingleDate/>
-        <SingleDate/>
+        {reminders.map(data => (
+          <div key={data.date}>
+            <SingleDate reminders={data.reminders} setReminders={setReminders} date={data.date}/> 
+          </div>
+        ))}
+       
       </div>
-      <NewReminder isOpen={newReminderOpen} setNewReminderClose={() => setNewReminderOpen(!newReminderOpen)}/>
-
-
-
+      <NewReminder reminders={reminders} setReminders={setReminders} isOpen={newReminderOpen} setNewReminderClose={() => setNewReminderOpen(false)}/>
     </div>
   )
 }

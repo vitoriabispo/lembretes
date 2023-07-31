@@ -23,7 +23,28 @@
 ---
 
 ## 📝instruções de execução
+1. Clonar o repositório por meio de  
+``` $ git clone https://github.com/vitoriabispo/rackers_test_lembretes.git ``` 
 
+2. Dentro da pasta do repositório, executar o comando abaixo:
+
+``` $ yarn install ``` 
+
+3. Criação de um arquivo .env (exemplo abaixo):
+
+```  
+HOST = localhost
+USER = root
+PASSWORD = root
+DATABASE = reminders
+PORT = 3333 
+``` 
+4. Criar um banco de dados com o mesmo nome inserido no .env
+5. Com o repositório clonado, acessar a pasta backend e executar o comando abaixo:  
+``` $ npm start ``` 
+
+6. Em outro terminal, acessar a pasta frontend e executar o comando abaixo:  
+``` $ npm start ``` 
 ---
 
 ## 🎨 protótipo desenvolvido
