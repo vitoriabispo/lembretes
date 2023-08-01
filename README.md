@@ -17,7 +17,7 @@
 - Utilização de mysql2 para o banco de dados
 - Utilização do docker
 - Criação de middleware no Backend para validar os dados enviados por meio do formulário
-- Calendário só permite escolha de datas a partir do D+1 para impedir a inserção de datas fora do periodo especificado
+- Calendário só permite escolha de datas a partir do D+1 para impedir a inserção de datas fora do período especificado
 
 
 ## 📝instruções de execução
@@ -61,18 +61,18 @@ PORT = 3333
 ⁉️ Repository created for the pratical test of the company dti digital. The application is a reminder tool, where it's possible to create, view, delete and filter them.
 
 ## 💡 premises
-- It is not necessary to log in to the plataform
+- It is not necessary to log in on the platform
 - The user only tries to delete existing reminders
-- It is possible to search for reminders by date (to "reset" the search, send the empty date and click the search button again)
+- It is possible to search for reminders by date (to "reset" the search, send the empty date and click on the search button again) 
 
 
 ## 🤔 project decisions
-- Responsive plataform
+- Responsive platform
 - Backend developed in NodeJS
 - Frontend developed in ReactJS + CSS
 - Use of mysql2 for the database
 - Use of docker
-- Creation of middlware on the Backend to validate the data sent through the form
+- Creation of middleware on the Backend to validate the data sent through the form
 - The calendar only allows the selection of dates after D to prevent the insertion of dates outside the specified period
 
 

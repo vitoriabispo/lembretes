@@ -20,14 +20,6 @@ const deleteReminder = async (req, res) => {
   return res.status(204).json();
 }
 
-const updateReminder = async (req, res) => {
-  const { id } = req.params;
-
-  await remindersModel.updateReminder(id, req.body);
-
-  return res.status(204).json();
-}
-
 const filterReminder = async (req, res) => {
   const { date } =  req.params;
 
@@ -40,6 +32,5 @@ module.exports = {
   getAll,
   createReminder,
   deleteReminder,
-  updateReminder,
   filterReminder,
 }
