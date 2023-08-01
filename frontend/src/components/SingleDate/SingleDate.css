@@ -42,7 +42,19 @@
   border-radius: 10px;
 }
 
+.reminderContainerClosed {
+  overflow: hidden;
+}
+
 .singleReminder {
+  overflow: hidden;
+  max-height: 0;
+  background-color: #ffffff;
+
+  transition: 0.5s;
+}
+
+.singleReminderShow {
   background-color: #F77575;
   height: 35px;
   border-radius: 10px;
@@ -51,9 +63,11 @@
   display: grid;
   grid-template-columns: 15fr 1fr;
   align-items: center;
+  
+  transition: 0.5s;
 }
 
-.singleReminder p {
+.singleReminderShow p {
   margin-left: 10px;
   font-weight: 600;
   font-size: 18px;
@@ -109,7 +123,7 @@
     height: 20px;
   }
 
-  .singleReminder p {
+  .singleReminderShow p {
     font-size: 14px;
   }
 }

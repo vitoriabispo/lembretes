@@ -1,13 +1,14 @@
 
 # 👩🏾‍💻 teste-dti 👩🏾‍💻
 
-⁉️ Repositório criado para o teste prático da empresa dti digital. A aplicação trata-se de uma ferramenta de lembretes, onde é possível criar, visualizar, deletar, editar e filtrá-los.
+⁉️ Repositório criado para o teste prático da empresa dti digital. A aplicação trata-se de uma ferramenta de lembretes, onde é possível criar, visualizar, deletar e filtrá-los.
 
 ---
 
 ## 💡premissas
 - Não é necessário realizar login na plataforma
 - O usuário só tenta apagar lembretes já existentes
+- É possível buscar os lembretes por data (para "resetar" a busca de lembretes, basta enviar a data vazia e clicar no botão de buscar novamente)
 
 ---
 

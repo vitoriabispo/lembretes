@@ -1,7 +1,7 @@
-import {  useEffect } from 'react';
+import {  useEffect, useState } from 'react';
 
 import { FiTrash } from 'react-icons/fi';
-import { BsFillCaretDownFill } from 'react-icons/bs'
+import { BsFillCaretDownFill, BsFillCaretUpFill } from 'react-icons/bs'
 
 import './SingleDate.css';
 import api from '../../service/api'
@@ -11,6 +11,7 @@ import transformDate from "../../utils/transformDate"
 
 
 export function SingleDate({reminders, setReminders, date}) {
+  const [ selected, setSelected ] = useState(null);
 
   function formatDate (date) {
     var data = new Date(date);
@@ -39,6 +40,13 @@ export function SingleDate({reminders, setReminders, date}) {
     }
   }
 
+  function toggle(i) {
+    if (selected === i){
+      return setSelected(null);
+    }
+    setSelected(i);
+  }
+
   useEffect(() => {
 
   }, [reminders])
@@ -47,13 +55,13 @@ export function SingleDate({reminders, setReminders, date}) {
       <div className="accordionSingleDate">
         <div className="dateReminder">
           <p>{formatDate(date)}</p>
-          <button>
-            <BsFillCaretDownFill size={22}/>
+          <button onClick={() => toggle(reminders)}>
+            {selected === reminders ? <BsFillCaretUpFill size={22}/> : <BsFillCaretDownFill size={22}/>}
           </button>
         </div>
-        <div className="reminderContainer">
+        <div className={selected === reminders ? "reminderContainer" : "reminderContainerClosed"}>
           {reminders.map(reminder => (
-            <div key={reminder.id} className="singleReminder" style={{ backgroundColor: reminder.color }}>
+            <div key={reminder.id} className={selected === reminders ? "singleReminderShow" : "singleReminder"} style={{ backgroundColor: reminder.color }}>
               <p>{reminder.text}</p>
               <div className="singleReminderBtns">
                 <button onClick={(e) => {onDelete(e, reminder.id)}} ><FiTrash size={22} style={{ backgroundColor: reminder.color }} /></button>
