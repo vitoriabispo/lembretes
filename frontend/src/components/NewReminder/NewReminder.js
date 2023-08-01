@@ -9,14 +9,14 @@ import orderList from "../../utils/orderList"
 import transformDate from "../../utils/transformDate"
 
 
-export function NewReminder({ isOpen, setNewReminderClose, reminders, setReminders }) {
+export function NewReminder({ editByID, isOpen, setNewReminderClose, reminders, setReminders }) {
 
   const [text, setText] = useState('');
   const [date, setDate] = useState('');
   const [color, setColor] = useState('');
   const [selectedColor, setSelectedColor] = useState('');
   const daysInMonth = { 1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31 };
-
+  
   async function onSubmit(e) {
     e.preventDefault();
     if(text === '' || date === '' || color === '')
@@ -43,12 +43,14 @@ export function NewReminder({ isOpen, setNewReminderClose, reminders, setReminde
     var date = new Date();
     var day = date.getDate()+1; // só pode para dias maiores que o atual
     day = day < 10 ? '0' + day : day; 
+
     var month = date.getMonth()+1;
     if( day > daysInMonth[month]) {
       day = '01';
       month+=1;
     }
-    month = month < 10 ? '0' + month : month; 
+    month = month < 10 ? '0' + month : month;
+     
     var year = date.getFullYear();
     
     var minDate = year+"-"+month+"-"+day;
@@ -59,7 +61,6 @@ export function NewReminder({ isOpen, setNewReminderClose, reminders, setReminde
     setColor(e.target.value);
     setSelectedColor(e.target.value);
   }
-
   if(isOpen) {
     return(
       <div className="newReminderBG">
@@ -110,7 +111,7 @@ export function NewReminder({ isOpen, setNewReminderClose, reminders, setReminde
                 id="create" 
                 onClick={(e) => onSubmit(e)}
               >
-                  create
+                 create
               </button>
             </form>
           </div>

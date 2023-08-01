@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import {  useEffect } from 'react';
 
-import { FiEdit2, FiTrash } from 'react-icons/fi';
+import { FiTrash } from 'react-icons/fi';
 import { BsFillCaretDownFill } from 'react-icons/bs'
 
 import './SingleDate.css';
@@ -8,6 +8,7 @@ import api from '../../service/api'
 import groupBy from "../../utils/groupBy"
 import orderList from "../../utils/orderList"
 import transformDate from "../../utils/transformDate"
+
 
 export function SingleDate({reminders, setReminders, date}) {
 
@@ -34,12 +35,8 @@ export function SingleDate({reminders, setReminders, date}) {
       const groupedArray = groupBy(res.data, "date");
       setReminders(orderList(transformDate(groupedArray)));
     } catch {
-      alert("Não foi possível excluir o lembrete");
+      alert("Unable to delete the reminder");
     }
-  }
-
-  async function onEdit(e, id) {
-    e.preventDefault();
   }
 
   useEffect(() => {
@@ -59,7 +56,6 @@ export function SingleDate({reminders, setReminders, date}) {
             <div key={reminder.id} className="singleReminder" style={{ backgroundColor: reminder.color }}>
               <p>{reminder.text}</p>
               <div className="singleReminderBtns">
-                <button><FiEdit2 size={22} style={{ backgroundColor: reminder.color }}/></button>
                 <button onClick={(e) => {onDelete(e, reminder.id)}} ><FiTrash size={22} style={{ backgroundColor: reminder.color }} /></button>
               </div>
             </div>

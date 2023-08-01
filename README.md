@@ -24,6 +24,7 @@
 
 ## 📝instruções de execução
 1. Clonar o repositório por meio de  
+
 ``` $ git clone https://github.com/vitoriabispo/rackers_test_lembretes.git ``` 
 
 2. Dentro da pasta do repositório, executar o comando abaixo:
