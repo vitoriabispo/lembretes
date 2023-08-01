@@ -61,7 +61,7 @@
   padding: 5px;
 
   display: grid;
-  grid-template-columns: 15fr 1fr;
+  grid-template-columns: 20fr 1fr;
   align-items: center;
   
   transition: 0.5s;

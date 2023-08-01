@@ -35,21 +35,20 @@ export function SingleDate({reminders, setReminders, date}) {
       const res = await api.get('/');
       const groupedArray = groupBy(res.data, "date");
       setReminders(orderList(transformDate(groupedArray)));
+
     } catch {
       alert("Unable to delete the reminder");
     }
   }
 
   function toggle(i) {
-    if (selected === i){
-      return setSelected(null);
-    }
-    setSelected(i);
+    setSelected(current => current === reminders? null : reminders)
   }
 
   useEffect(() => {
-
+    setSelected(current => current === reminders? null : reminders)
   }, [reminders])
+  
   return(
     <div className="singleDate">
       <div className="accordionSingleDate">
