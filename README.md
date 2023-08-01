@@ -52,6 +52,8 @@ PORT = 3333
 ## 🎨 protótipo desenvolvido
 🔗 Link para Figma: https://www.figma.com/file/s3w7Lr4MizdYX9y1S1Yjd2/teste-lembretes?type=design&node-id=0%3A1&mode=design&t=lNyGrX4hcQeTRYbb-1
 
+🔗 Link para o vídeo: https://drive.google.com/file/d/1EJK2a7pdnxZ-8vTFVDNdhXgLN5l5nIFP/view?usp=sharing
+
 ---
 
 🌐 eng
@@ -106,3 +108,5 @@ PORT = 3333
 ## 🎨 developed prototype
 
 🔗 Figma link: https://www.figma.com/file/s3w7Lr4MizdYX9y1S1Yjd2/teste-lembretes?type=design&node-id=0%3A1&mode=design&t=lNyGrX4hcQeTRYbb-1
+
+🔗 Video link: https://drive.google.com/file/d/1EJK2a7pdnxZ-8vTFVDNdhXgLN5l5nIFP/view?usp=sharing
