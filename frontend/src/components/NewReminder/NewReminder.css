@@ -165,3 +165,47 @@ input[type="date"]::-webkit-inner-spin-button {
 input[type="date"]::-webkit-clear-button {
    z-index: 1;
 }
+
+
+@media (max-width: 600px) {
+  .newReminderForm {
+    top: 60px;
+    right: 0;
+  }
+  
+  .formNewReminder {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .formNewReminder input {
+    width: 240px;
+  }
+  
+  .formNewReminder button {
+    width: 250px;
+    font-size: 12px;
+  }
+
+  .descriptionNewReminder h3 {
+    font-size: 20px;
+  }
+  
+  .descriptionNewReminder p {
+    font-size: 14px;
+  }
+  
+  .containerDateColor {
+    max-width: 250px;
+
+  }
+  
+  .containerDateColor #date {
+    max-width: 120px;
+  }
+  
+  .containerDateColor #color {
+    max-width: 110px;
+  }
+}

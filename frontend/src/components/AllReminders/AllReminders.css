@@ -87,3 +87,66 @@
   overflow: hidden;
   overflow-y: scroll;
 }
+
+@media (max-width: 800px) {
+  .searchRow {
+    width: 550px;
+  
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .searchRow {
+    width: 450px;
+  }
+  
+  .searchRow input {
+    width: 120px;
+  }
+  
+  .newReminderButton button {
+    width: 140px;
+  }
+
+  .descriptionAllReminders h3 {
+    font-size: 20px;
+  }
+  
+  .descriptionAllReminders p {
+    font-size: 14px;
+  }
+
+  .newReminderButton button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .searchRow {
+    width: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  .searchRow {
+    width: 300px;
+  }
+  
+}
+
+@media (max-width: 300px) {
+  .searchRow {
+    width: 250px;
+  }
+  .searchRow input {
+    width: 100px;
+  }
+  
+  .newReminderButton button {
+    width: 120px;
+  }
+}
